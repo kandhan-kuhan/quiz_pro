@@ -1,0 +1,13 @@
+<%= form_tag({:controller => "quiz", :action => "answer"}) do %>
+<p id="question"><%= @show.text %></p>
+<p class="choice">
+		<%= radio_button_tag(:choice, @show.ansa) %>
+		<%= label_tag("choice1",@show.ansa) %>
+		<%= radio_button_tag(:choice, @show.ansb) %>
+		<%= label_tag("choice2",@show.ansb) %>
+	 </p>
+
+  <div class="center">
+	 <%= submit_tag("Continue", :class => "submit") %>
+  </div>
+<% end %>
